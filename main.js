@@ -193,7 +193,7 @@ function main() {
 				if (forceReInit) {
 					initDevice(deviceId,channelId,objectId,item);
 				}
-				adapter.setState(objectId, item.value);
+				adapter.setState(objectId, item.value,true);
 			});
 
 			if (forceReInit) {
