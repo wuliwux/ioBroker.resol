@@ -12,7 +12,7 @@
         "mode":                     "daemon",
         "icon":                     "resol.png",
         "enabled":                  true,
-	"extIcon":                  "https://raw.githubusercontent.com/ioBroker/ioBroker.resol/master/admin/resol.png",
+	"extIcon":                  "https://github.com/wuliwux/iobroker.resol/blob/master/admin/resol.png",
 	"keywords":                 ["resol", "vis", "GUI", "graphical", "Solar"],
         "readme":                   "https://github.com/ioBroker/ioBroker.resol/blob/master/README.md",
 	"loglevel":                 "info",
