@@ -54,6 +54,9 @@ It includes both code running within iobroker and as vis widget. If you only pla
 
 ## Changelog
 
+### 0.5.1
+  (wuliwux) various improvements
+
 ### 0.5.0
   (vegetto) include vis widget
 
