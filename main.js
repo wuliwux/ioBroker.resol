@@ -208,10 +208,10 @@ function main() {
                 var name = 'Unknown';
                 switch (item.name) {
                     case 'Temperature S1':
-                        name = 'Boiler';
+                        name = 'Kollektor';
                         break;
                     case 'Temperature S2':
-                        name = 'Kollektor';
+                        name = 'Boiler';
                         break;
                     case 'Temperature S3':
                         name = 'Puffer';
