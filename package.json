@@ -4,12 +4,12 @@
   "description": "ioBroker resol Adapter",
   "author": {
     "name": "wuliwux",
-    "email": "wuliwux1@aon.at"
+    "email": "wuliwux@xcore.at"
   },
   "contributors": [
     {
       "name": "wuliwux",
-      "email": "wuliwux1@aon.at"
+      "email": "wuliwux@xcore.at"
     }
   ],
   "homepage": "https://github.com/ioBroker/ioBroker.resol",
