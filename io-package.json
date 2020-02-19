@@ -1,6 +1,6 @@
 {
 	"common": {
-		"name": "iobroker.resol",
+		"name": "resol",
 		"version": "0.6.1",
 		"title": "Resol Adapter",
 		"desc": {
