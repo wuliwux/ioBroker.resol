@@ -25,7 +25,7 @@
 		"type": "common adapters",
 		"restartAdapters": ["vis"],
 		"compact": true,
-		"authors": ["wuliwux <wuliwux1@gmail.com>"],
+		"authors": ["wuliwux <wuliwux@xcore.at>"],
 		"materialize": true,
 		"dependencies": [
 			{
