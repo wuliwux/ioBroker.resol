@@ -44,23 +44,23 @@ var spec = vbus.Specification.getDefaultSpecification();
 var utils = require(__dirname + '/lib/utils'); // Get common adapter utils
 
 
+var ctx = {
+    headerSet: null,
+    hsc: null,
+    connection: null,
+};
 
 var adapter;
 
 function startAdapter(options) {
     options = options || {};
-    Object.assign(options, { name: 'resol' });
 
     // you have to call the adapter function and pass a options object
     // name has to be set and has to be equal to adapters folder name and main file name excluding extension
     // adapter will be restarted automatically every time as the configuration changed, e.g system.adapter.resol.0
-    adapter = utils.adapter(options);
+    adapter = utils.adapter('resol');
 
-    var ctx = {
-        headerSet: null,
-        hsc: null,
-        connection: null,
-    };
+    
 
 
     // is called when adapter shuts down - callback has to be called under any circumstances!
