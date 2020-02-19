@@ -1,7 +1,7 @@
 {
 	"common": {
 		"name": "resol",
-		"version": "0.6.1",
+		"version": "0.6.2",
 		"title": "Resol Adapter",
 		"desc": {
 			"en": "ioBroker resol Adapter",
@@ -24,7 +24,14 @@
 		"loglevel": "info",
 		"type": "common adapters",
 		"restartAdapters": ["vis"],
-		"compact": true
+		"compact": true,
+		"authors": ["wuliwux <wuliwux1@gmail.com>"],
+		"materialize": true,
+		"dependencies": [
+			{
+				"js-controller": ">=1.4.2"
+			}
+		]
 	},
 	"native": {
 		"IP": "10.0.0.150",
