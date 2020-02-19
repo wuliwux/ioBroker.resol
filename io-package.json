@@ -1,7 +1,7 @@
 {
 	"common": {
 		"name": "resol",
-		"version": "0.6.2",
+		"version": "0.6.3",
 		"title": "Resol Adapter",
 		"desc": {
 			"en": "ioBroker resol Adapter",
@@ -9,7 +9,7 @@
 			"ru": "ioBroker Resol драйвер как образец"
 		},
 		"news": {
-			"0.6.2": {
+			"0.6.3": {
 				"en": "add compact mode support",
 				"de": "compact mode unterstützung hinzugefügt"
 			}
