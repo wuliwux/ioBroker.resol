@@ -1,33 +1,37 @@
 {
-    "common": {
-        "name":                     "resol",
-        "version":                  "0.5.2",
-        "title":                    "Resol Adapter",
-        "desc":                     {
- 			             "en": "ioBroker resol Adapter",
- 			             "de": "ioBroker Resol Adapter",
- 			             "ru": "ioBroker Resol драйвер как образец"
+	"common": {
+		"name": "resol",
+		"version": "0.6.0",
+		"title": "Resol Adapter",
+		"desc": {
+			"en": "ioBroker resol Adapter",
+			"de": "ioBroker Resol Adapter",
+			"ru": "ioBroker Resol драйвер как образец"
+		},
+		"news": {
+			"0.6.0": {
+				"en": "add compact mode support",
+				"de": "compact mode unterstützung hinzugefügt"
+			}
+		},
+		"platform": "Javascript/Node.js",
+		"mode": "daemon",
+		"icon": "resol.png",
+		"enabled": true,
+		"extIcon": "https://github.com/wuliwux/iobroker.resol/blob/master/admin/resol.png",
+		"keywords": ["resol", "vis", "GUI", "graphical", "Solar"],
+		"readme": "https://github.com/ioBroker/ioBroker.resol/blob/master/README.md",
+		"loglevel": "info",
+		"type": "common adapters",
+		"restartAdapters": ["vis"],
+		"compact": true
 	},
-        "platform":                 "Javascript/Node.js",
-        "mode":                     "daemon",
-        "icon":                     "resol.png",
-        "enabled":                  true,
-	"extIcon":                  "https://github.com/wuliwux/iobroker.resol/blob/master/admin/resol.png",
-	"keywords":                 ["resol", "vis", "GUI", "graphical", "Solar"],
-        "readme":                   "https://github.com/ioBroker/ioBroker.resol/blob/master/README.md",
-	"loglevel":                 "info",
-        "type":                     "common adapters",
-        "restartAdapters":          ["vis"]
-    },
-    "native": {
-        "IP": "10.0.0.150",
-        "Port": 7053,
-		"password":"vbus",
-		"interval":60,
-		"forceReInit":true
-    },
-    "objects": [
-
-
-    ]
+	"native": {
+		"IP": "10.0.0.150",
+		"Port": 7053,
+		"password": "vbus",
+		"interval": 60,
+		"forceReInit": true
+	},
+	"objects": []
 }
