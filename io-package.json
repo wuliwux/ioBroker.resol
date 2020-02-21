@@ -26,6 +26,7 @@
 		"type": "climate-control",
 		"connectionType": "local",
 		"restartAdapters": [],
+		"license": "MIT",
 		"compact": true,
 		"authors": ["wuliwux <wuliwux@xcore.at>"],
 		"materialize": true,

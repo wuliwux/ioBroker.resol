@@ -40,6 +40,7 @@
 		"grunt-contrib-copy": "^1.0.0",
 		"grunt-exec": "^3.0.0"
 	},
+	"main": "main.js",
 	"bugs": {
 		"url": "https://github.com/ioBroker/ioBroker.resol/issues"
 	},
