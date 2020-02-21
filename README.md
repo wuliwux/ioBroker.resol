@@ -16,27 +16,15 @@ https://www.resol.de/de/produktdetail/76
 
 ### 0.6.3
 
-(wuliwux) add compact mode support
+    (wuliwux) add compact mode support
 
 ### 0.5.2
 
-(wuliwux) Kollektor und Boiler richtig
+    (wuliwux) Kollektor und Boiler richtig
 
 ### 0.5.1
 
-(wuliwux) various improvements
-
-### 0.5.0
-
-(vegetto) include vis widget
-
-#### 0.4.0
-
--   (bluefox) fix errors with grunt
-
-#### 0.2.0
-
--   (bluefox) initial release
+    (wuliwux) various improvements
 
 ## License
 
