@@ -2,7 +2,8 @@
 	"common": {
 		"name": "resol",
 		"version": "0.6.3",
-		"title": "Resol Adapter",
+		"title": "Resol",
+		"titleLang": "read the VBUS by LAN",
 		"desc": {
 			"en": "ioBroker resol Adapter",
 			"de": "ioBroker Resol Adapter",
@@ -22,8 +23,9 @@
 		"keywords": ["resol", "vis", "GUI", "graphical", "Solar"],
 		"readme": "https://github.com/ioBroker/ioBroker.resol/blob/master/README.md",
 		"loglevel": "info",
-		"type": "common adapters",
-		"restartAdapters": ["vis"],
+		"type": "climate-control",
+		"connectionType": "local",
+		"restartAdapters": [],
 		"compact": true,
 		"authors": ["wuliwux <wuliwux@xcore.at>"],
 		"materialize": true,
