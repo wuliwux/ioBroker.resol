@@ -31,10 +31,6 @@
 /*jslint node: true */
 "use strict";
 
-
-
-
-
 var vbus = require('resol-vbus');
 var _ = require('lodash');
 
@@ -42,7 +38,6 @@ var _ = require('lodash');
 var spec = vbus.Specification.getDefaultSpecification();
 // you have to require the utils module and call adapter function
 var utils = require(__dirname + '/lib/utils'); // Get common adapter utils
-
 
 var ctx = {
     headerSet: null,
@@ -59,9 +54,6 @@ function startAdapter(options) {
     // name has to be set and has to be equal to adapters folder name and main file name excluding extension
     // adapter will be restarted automatically every time as the configuration changed, e.g system.adapter.resol.0
     adapter = utils.adapter('resol');
-
-    
-
 
     // is called when adapter shuts down - callback has to be called under any circumstances!
     adapter.on('unload', function (callback) {
@@ -183,6 +175,10 @@ function main() {
                 adapter.setState(objectId, item.value, true);
             });
 
+            var lastMessageReceivedId = data.deviceId.replace(/_/g, '') + item.addressId.replace(/_/g, '') + "." + "lastMessageReceived";
+            this.adapter.setObjectNotExists(lastMessageReceivedId, new Date().toLocaleString("de-AT"), true);
+
+
             if (forceReInit) {
                 adapter.extendForeignObject('system.adapter.' + adapter.namespace, {
                     native: {
@@ -198,6 +194,9 @@ function main() {
     }
 
     function initDevice(deviceId, channelId, objectId, item) {
+
+
+
         adapter.setObjectNotExists(deviceId, {
             type: 'device',
             common: {

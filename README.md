@@ -14,6 +14,10 @@ https://www.resol.de/de/produktdetail/76
 
 ## Changelog
 
+## 0.6.4
+
+    (wuliwux) add lastMessageReceived State
+
 ### 0.6.3
 
     (wuliwux) add compact mode support
