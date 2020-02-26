@@ -175,7 +175,7 @@ function main() {
                 adapter.setState(objectId, item.value, true);
             });
 
-            var lastMessageReceivedId = data.deviceId.replace(/_/g, '') + item.addressId.replace(/_/g, '') + "." + "lastMessageReceived";
+            var lastMessageReceivedId = data.deviceId.replace(/_/g, '') + data.addressId.replace(/_/g, '') + "." + "lastMessageReceived";
             this.adapter.setObjectNotExists(lastMessageReceivedId, new Date().toLocaleString("de-AT"), true);
 
 
