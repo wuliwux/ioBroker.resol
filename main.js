@@ -34,7 +34,6 @@
 var vbus = require('resol-vbus');
 var _ = require('lodash');
 
-//var i18n = new vbus.I18N('en');
 var spec = vbus.Specification.getDefaultSpecification();
 // you have to require the utils module and call adapter function
 var utils = require(__dirname + '/lib/utils'); // Get common adapter utils
@@ -101,7 +100,6 @@ function startAdapter(options) {
     return adapter;
 }
 
-
 function main() {
 
     // The adapters config (in the instance object everything under the attribute "native") is accessible via
@@ -122,7 +120,6 @@ function main() {
     adapter.checkGroup('admin', 'admin', function (res) {
         console.log('check group user admin group admin: ' + res);
     });
-
 
     function initResol() {
 
@@ -164,6 +161,9 @@ function main() {
                 };
             });
 
+            adapter.log.info('headerSet packetFields received: ' + JSON.stringify(packetFields));
+
+            var first = true;
             _.each(data, function (item) {
                 var deviceId = item.deviceId.replace(/_/g, '');
                 var channelId = deviceId + '.' + item.addressId;
@@ -173,10 +173,14 @@ function main() {
                     initDevice(deviceId, channelId, objectId, item);
                 }
                 adapter.setState(objectId, item.value, true);
+
+                if (first) {
+                    first = false;
+                    var lastMessageReceivedId = channelId + "." + "lastMessageReceived";
+                    this.adapter.setObjectNotExists(lastMessageReceivedId, new Date().toLocaleString("de-AT"), true);
+                }
             });
 
-            var lastMessageReceivedId = data.deviceId.replace(/_/g, '') + data.addressId.replace(/_/g, '') + "." + "lastMessageReceived";
-            this.adapter.setObjectNotExists(lastMessageReceivedId, new Date().toLocaleString("de-AT"), true);
 
 
             if (forceReInit) {
@@ -194,8 +198,6 @@ function main() {
     }
 
     function initDevice(deviceId, channelId, objectId, item) {
-
-
 
         adapter.setObjectNotExists(deviceId, {
             type: 'device',
@@ -259,7 +261,6 @@ function main() {
     }
     initResol();
 }
-
 
 // If started as allInOne/compact mode => return function to create instance
 if (module && module.parent) {
