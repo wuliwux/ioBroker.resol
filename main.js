@@ -171,13 +171,26 @@ function main() {
 
                 if (forceReInit) {
                     initDevice(deviceId, channelId, objectId, item);
+
                 }
                 adapter.setState(objectId, item.value, true);
 
                 if (first) {
                     first = false;
-                    var lastMessageReceivedId = channelId + "." + "lastMessageReceived";
-                    adapter.setObjectNotExists(lastMessageReceivedId, new Date().toLocaleString("de-AT"), true);
+                    var deviceName = "lastMessageReceived";
+                    var lastMessageReceivedId = channelId + "." + deviceName;
+                    var obj = {
+                        type: 'state',
+                        common: {
+                            name: deviceName,
+                            type: 'string',
+                            write: false
+                        },
+                        native: {}
+                    };
+                    adapter.setObjectNotExists(lastMessageReceivedId, obj, function () {
+                        adapter.setState(lastMessageReceivedId, new Date().toLocaleString("de-AT"), true);
+                    });
                 }
             });
 
