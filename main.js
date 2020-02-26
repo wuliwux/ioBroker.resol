@@ -177,7 +177,7 @@ function main() {
                 if (first) {
                     first = false;
                     var lastMessageReceivedId = channelId + "." + "lastMessageReceived";
-                    this.adapter.setObjectNotExists(lastMessageReceivedId, new Date().toLocaleString("de-AT"), true);
+                    adapter.setObjectNotExists(lastMessageReceivedId, new Date().toLocaleString("de-AT"), true);
                 }
             });
 
