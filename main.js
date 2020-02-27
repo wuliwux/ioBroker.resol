@@ -214,8 +214,6 @@ function main() {
                 }
             });
 
-
-
             if (forceReInit) {
                 adapter.extendForeignObject('system.adapter.' + adapter.namespace, {
                     native: {
