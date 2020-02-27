@@ -14,6 +14,10 @@ https://www.resol.de/de/produktdetail/76
 
 ## Changelog
 
+## 0.6.5
+
+    (wuliwux) update resol-vbus version 0.17.0
+
 ## 0.6.4
 
     (wuliwux) add lastMessageReceived State

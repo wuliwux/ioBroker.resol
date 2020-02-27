@@ -147,6 +147,9 @@ function main() {
 
         ctx.hsc.on('headerSet', function (headerSet) {
             var packetFields = spec.getPacketFieldsForHeaders(ctx.headerSet.getSortedHeaders());
+
+            adapter.log.info('headerSet packetFields received: ' + JSON.stringify(packetFields));
+
             var data = _.map(packetFields, function (pf) {
                 return {
                     id: pf.id,
@@ -160,9 +163,6 @@ function main() {
                     rootTypeId: pf.packetFieldSpec.type.rootTypeId
                 };
             });
-
-            adapter.log.info('headerSet packetFields received: ' + JSON.stringify(packetFields));
-
             var first = true;
             _.each(data, function (item) {
                 var deviceId = item.deviceId.replace(/_/g, '');
