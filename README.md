@@ -17,6 +17,7 @@ https://www.resol.de/de/produktdetail/76
 ## 0.6.5
 
     (wuliwux) update resol-vbus version 0.17.0
+              add lastHeaderSetPacketFields State
 
 ## 0.6.4
 

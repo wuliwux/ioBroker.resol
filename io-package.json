@@ -11,8 +11,8 @@
 		},
 		"news": {
 			"0.6.5": {
-				"en": "update resol-vbus version 0.17.0",
-				"de": "update resol-vbus version 0.17.0"
+				"en": "update resol-vbus version 0.17.0 and add lastHeaderSetPacketFields State",
+				"de": "update resol-vbus version 0.17.0  and add lastHeaderSetPacketFields State"
 			},
 			"0.6.4": {
 				"en": "add lastMessageReceived State",
