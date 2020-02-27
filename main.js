@@ -177,20 +177,40 @@ function main() {
 
                 if (first) {
                     first = false;
-                    var deviceName = "lastMessageReceived";
-                    var lastMessageReceivedId = channelId + "." + deviceName;
-                    var obj = {
-                        type: 'state',
-                        common: {
-                            name: deviceName,
-                            type: 'string',
-                            write: false
-                        },
-                        native: {}
-                    };
-                    adapter.setObjectNotExists(lastMessageReceivedId, obj, function () {
-                        adapter.setState(lastMessageReceivedId, new Date().toLocaleString("de-AT"), true);
-                    });
+                    {
+                        // set lastmessageReceived
+                        var deviceName = "lastMessageReceived";
+                        var lastMessageReceivedId = channelId + "." + deviceName;
+                        var obj = {
+                            type: 'state',
+                            common: {
+                                name: deviceName,
+                                type: 'string',
+                                write: false
+                            },
+                            native: {}
+                        };
+                        adapter.setObjectNotExists(lastMessageReceivedId, obj, function () {
+                            adapter.setState(lastMessageReceivedId, new Date().toLocaleString("de-AT"), true);
+                        });
+                    }
+                    {
+                        // set lastHeaderSetPacketFields
+                        var deviceName = "lastHeaderSetPacketFields";
+                        var lastHeaderSetPacketFieldsId = channelId + "." + deviceName;
+                        var obj = {
+                            type: 'state',
+                            common: {
+                                name: deviceName,
+                                type: 'string',
+                                write: false
+                            },
+                            native: {}
+                        };
+                        adapter.setObjectNotExists(lastHeaderSetPacketFieldsId, obj, function () {
+                            adapter.setState(lastHeaderSetPacketFieldsId, JSON.stringify(packetFields), true);
+                        });
+                    }
                 }
             });
 
