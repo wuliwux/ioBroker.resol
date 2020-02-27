@@ -72,7 +72,7 @@ function startAdapter(options) {
     // is called if a subscribed state changes
     adapter.on('stateChange', function (id, state) {
         // Warning, state can be null if it was deleted
-        adapter.log.info('stateChange ' + id + ' ' + JSON.stringify(state));
+        adapter.log.info('stateChange: ' + id + ' ' + JSON.stringify(state));
         // you can use the ack flag to detect if it is status (true) or command (false)
         if (state && !state.ack) {
             adapter.log.info('ack is not set!');
