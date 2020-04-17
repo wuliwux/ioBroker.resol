@@ -98,9 +98,9 @@ function startAdapter(options) {
     // start here!
     adapter.on('ready', function () {
         if (adapter.config.outputLevelDebug === undefined || adapter.config.outputLevelDebug === null) {
-            outputLevelDebug.config.outputLevelDebug = false;
+            adapter.config.outputLevelDebug = false;
         }
-        
+
         main();
     });
     return adapter;
