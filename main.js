@@ -54,9 +54,7 @@ function startAdapter(options) {
     // adapter will be restarted automatically every time as the configuration changed, e.g system.adapter.resol.0
     adapter = utils.adapter('resol');
 
-    if (adapter.config.outputLevelDebug === undefined || adapter.config.outputLevelDebug === null) {
-        outputLevelDebug.config.outputLevelDebug = false;
-    }
+   
 
     // is called when adapter shuts down - callback has to be called under any circumstances!
     adapter.on('unload', function (callback) {
@@ -99,6 +97,10 @@ function startAdapter(options) {
     // is called when databases are connected and adapter received configuration.
     // start here!
     adapter.on('ready', function () {
+        if (adapter.config.outputLevelDebug === undefined || adapter.config.outputLevelDebug === null) {
+            outputLevelDebug.config.outputLevelDebug = false;
+        }
+        
         main();
     });
     return adapter;
