@@ -1,7 +1,7 @@
 {
 	"common": {
 		"name": "resol",
-		"version": "0.6.6",
+		"version": "0.6.7",
 		"title": "Resol",
 		"titleLang": "read the VBUS by LAN",
 		"desc": {
@@ -10,6 +10,10 @@
 			"ru": "ioBroker Resol драйвер как образец"
 		},
 		"news": {
+			"0.6.7": {
+				"en": "add config outputLevelDebug",
+				"de": "config für outputLevelDebug hinzugefügt"
+			},
 			"0.6.6": {
 				"en": "update resol-vbus version 0.20.0",
 				"de": "update resol-vbus version 0.20.0"

@@ -1,7 +1,7 @@
 <html>
 
 <!-- these 4 files always have to be included -->
-<link rel="stylesheet" type="text/css" href="../../lib/css/themes/jquery-ui/redmond/jquery-ui.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../lib/css/themes/jquery-ui/redmond/jquery-ui.min.css" />
 <script type="text/javascript" src="../../lib/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="../../socket.io/socket.io.js"></script>
 <script type="text/javascript" src="../../lib/js/jquery-ui-1.10.3.full.min.js"></script>
@@ -19,7 +19,7 @@
 -->
 
 <!-- these two file always have to be included -->
-<link rel="stylesheet" type="text/css" href="../../css/adapter.css"/>
+<link rel="stylesheet" type="text/css" href="../../css/adapter.css" />
 <script type="text/javascript" src="../../js/translate.js"></script>
 <script type="text/javascript" src="../../js/adapter-settings.js"></script>
 
@@ -29,11 +29,15 @@
 
 	// Dictionary (systemDictionary is global variable from adapter-settings.js)
 	systemDictionary = {
-		"ipAddress":           {"en": "IP-Address", "de": "IP-Adresse", "ru": "IP-Address"},
-		"port":         {"en": "TCP-Port", "de": "TCP-Port", "ru": "TCP-Port"},
-		"password":         {"en": "Password", "de": "Passwort", "ru": "Password"},
-		"interval":         {"en": "Timer Intervall (Seconds)", "de": "Timer Interval (Sekunden)", "ru": "Timer Intervall (Seconds)"},
-		"forceReInit":  {"en": "Synchronize objects (once)", "de": "Synchronisiere Geräte neu (einmalig)",  "ru": "Синхронизировать объекты (один раз)"},
+		"ipAddress": { "en": "IP-Address", "de": "IP-Adresse", "ru": "IP-Address" },
+		"port": { "en": "TCP-Port", "de": "TCP-Port", "ru": "TCP-Port" },
+		"password": { "en": "Password", "de": "Passwort", "ru": "Password" },
+		"interval": { "en": "Timer Intervall (Seconds)", "de": "Timer Interval (Sekunden)", "ru": "Timer Intervall (Seconds)" },
+		"forceReInit": { "en": "Synchronize objects (once)", "de": "Synchronisiere Geräte neu (einmalig)", "ru": "Синхронизировать объекты (один раз)" },
+		"outputLevelDebug": { "en": "debug output", "de": "debug Log" },
+
+		
+
 		"on save adapter restarts with new config immediately": {
 			"de": "Beim Speichern von Einstellungen der Adapter wird sofort neu gestartet.",
 			"ru": "Сразу после сохранения настроек драйвер перезапуститься с новыми значениями"
@@ -77,18 +81,23 @@
 <!-- you have to put your config page in a div with id adapter-container -->
 <div id="adapter-container">
 
-	<table><tr>
-		<td><img src="resol.png"/></td>
-		<td><h3 class="translate">resol adapter settings</h3></td>
-	</tr></table>
+	<table>
+		<tr>
+			<td><img src="resol.png" /></td>
+			<td>
+				<h3 class="translate">resol adapter settings</h3>
+			</td>
+		</tr>
+	</table>
 	<p>
 		<span class="translate">ipAddress</span> <input class="value" id="ipAddress" /><br>
-		<span class="translate">port</span> <input class="value" id="port"/><br>
-		<span class="translate">password</span> <input class="value" id="password"/><br>
-		
-		<span class="translate">interval</span> <input class="value" id="interval"/><br>
-		<span class="translate">forceReInit</span> <input type="checkbox" class="value" id="forceReInit"/><br>
+		<span class="translate">port</span> <input class="value" id="port" /><br>
+		<span class="translate">password</span> <input class="value" id="password" /><br>
+		<span class="translate">interval</span> <input class="value" id="interval" /><br>
+		<span class="translate">forceReInit</span> <input type="checkbox" class="value" id="forceReInit" /><br>
+		<span class="translate">outputLevelDebug</span> <input type="checkbox" class="value" id="outputLevelDebug" /><br>
 	</p>
 	<p class="translate">on save adapter restarts with new config immediately</p>
 </div>
+
 </html>

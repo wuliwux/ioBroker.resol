@@ -14,6 +14,10 @@ https://www.resol.de/de/produktdetail/76
 
 ## Changelog
 
+## 0.6.7
+    
+    (wuliwux) add config outputLevelDebug
+
 ## 0.6.6
 
     (wuliwux) update resol-vbus version 0.20.0

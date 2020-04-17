@@ -54,6 +54,10 @@ function startAdapter(options) {
     // adapter will be restarted automatically every time as the configuration changed, e.g system.adapter.resol.0
     adapter = utils.adapter('resol');
 
+    if (adapter.config.outputLevelDebug === undefined || adapter.config.outputLevelDebug === null) {
+        outputLevelDebug.config.outputLevelDebug = false;
+    }
+
     // is called when adapter shuts down - callback has to be called under any circumstances!
     adapter.on('unload', function (callback) {
         try {
@@ -109,6 +113,8 @@ function main() {
     adapter.log.info('config password: ' + adapter.config.password);
     adapter.log.info('config interval: ' + adapter.config.interval);
     adapter.log.info('config forceReInit: ' + adapter.config.forceReInit);
+   
+    adapter.log.info('config outputLevelDebug: ' + outputLevelDebug.config.outputLevelDebug);
 
     // in this resol all states changes inside the adapters namespace are subscribed
     adapter.subscribeStates('*');
@@ -148,7 +154,9 @@ function main() {
         ctx.hsc.on('headerSet', function (headerSet) {
             var packetFields = spec.getPacketFieldsForHeaders(ctx.headerSet.getSortedHeaders());
 
-            adapter.log.info('headerSet packetFields received: ' + JSON.stringify(packetFields));
+            if (outputLevelDebug.config.outputLevelDebug) {
+                adapter.log.info('headerSet packetFields received: ' + JSON.stringify(packetFields));
+            }
 
             var data = _.map(packetFields, function (pf) {
                 return {
@@ -175,7 +183,7 @@ function main() {
                 }
                 adapter.setState(objectId, item.value, true);
 
-                if (first) {
+                if (outputLevelDebug.config.outputLevelDebug && first) {
                     first = false;
                     {
                         // set lastmessageReceived
