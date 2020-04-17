@@ -116,7 +116,7 @@ function main() {
     adapter.log.info('config interval: ' + adapter.config.interval);
     adapter.log.info('config forceReInit: ' + adapter.config.forceReInit);
    
-    adapter.log.info('config outputLevelDebug: ' + outputLevelDebug.config.outputLevelDebug);
+    adapter.log.info('config outputLevelDebug: ' + adapter.config.outputLevelDebug);
 
     // in this resol all states changes inside the adapters namespace are subscribed
     adapter.subscribeStates('*');
@@ -156,7 +156,7 @@ function main() {
         ctx.hsc.on('headerSet', function (headerSet) {
             var packetFields = spec.getPacketFieldsForHeaders(ctx.headerSet.getSortedHeaders());
 
-            if (outputLevelDebug.config.outputLevelDebug) {
+            if (adapter.config.outputLevelDebug) {
                 adapter.log.info('headerSet packetFields received: ' + JSON.stringify(packetFields));
             }
 
@@ -185,7 +185,7 @@ function main() {
                 }
                 adapter.setState(objectId, item.value, true);
 
-                if (outputLevelDebug.config.outputLevelDebug && first) {
+                if (adapter.config.outputLevelDebug && first) {
                     first = false;
                     {
                         // set lastmessageReceived
