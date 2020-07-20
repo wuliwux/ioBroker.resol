@@ -14,6 +14,10 @@ https://www.resol.de/de/produktdetail/76
 
 ## Changelog
 
+## 0.6.8
+
+    (wuliwux) lodash security update
+
 ## 0.6.7
     
     (wuliwux) add config outputLevelDebug
