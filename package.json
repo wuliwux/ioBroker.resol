@@ -25,9 +25,9 @@
 		"url": "https://github.com/ioBroker/ioBroker.resol"
 	},
 	"dependencies": {
-		"@iobroker/adapter-core": "^2.4.0",
-		"lodash": "^4.17.19",
-		"resol-vbus": "^0.21.0"
+		"@iobroker/adapter-core": "^2.6.0",
+		"lodash": "^4.17.21",
+		"resol-vbus": "^0.25.0"
 	},
 	"devDependencies": {
 		"grunt": "^1.2.1",
