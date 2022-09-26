@@ -1,7 +1,7 @@
 {
 	"common": {
-		"name": "resol",
-		"version": "0.6.8",
+		"name": "wuliwux.resol",
+		"version": "0.6.9",
 		"title": "Resol",
 		"titleLang": "read the VBUS by LAN",
 		"desc": {
